@@ -13121,6 +13121,9 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># linear algebra</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># data processing, CSV file I/O (e.g. pd.read_csv)</span>
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;positive_emoji_v2.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">neg</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;negative_emoji_v2.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positive emoji: </span><span class="si">{}</span><span class="se">\n\n</span><span class="s2">Negative emoji: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pos</span><span class="p">),</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">neg</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;egypt tweets&quot;</span><span class="p">)))</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
@@ -13139,7 +13142,11 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Dr_Heba_Raouf.csv&#39;, &#39;egypt_tweets_2010.csv&#39;, &#39;egypt_tweets_2011.csv&#39;, &#39;egypt_tweets_2012.csv&#39;, &#39;egypt_tweets_2013.csv&#39;, &#39;egypt_tweets_2014.csv&#39;, &#39;egypt_tweets_2015.csv&#39;, &#39;egypt_tweets_2016.csv&#39;, &#39;egypt_tweets_2017.csv&#39;, &#39;egypt_tweets_2018.csv&#39;]
+<pre>Positive emoji: 👊🚂🚄🌝☺️🌟👚⛄♔🍼💞🎻🍬✨🍀☺😙🚤🎽🎡🏠💍✏🌛💎🌾🎠📣🌑🐰🍺😛👍🙆🚗🌚🌉👔🍎📝💄💻:D✎🎁💰📹😃😝🏨💒🌼💑🤣🌻😚🙋🌽🍷♨💫♛🍓🏃🚀🌞😇💐📺🐏🍚😅🎆🐥🙏💝🐪🍭🐶😁▲😺🏂😏🍟🍉🏈🏤🎊🎉🌴😻🆗❥🍧👠🌲🍩💙🏄🐵☕⚫🏊☼🎂🐈🐎🏰💟💛🌸📶🐱🍌:)🎶🎿🐡😋👗✒🙌😮🙂🌱💃🐔🍔💌💼🌔🐋👨🚓💖✈👰🔝🍦🎼👭🍒🏀🍑🔅🎈💗🐕💬❄💪🍃🐫🎷🎇👖♬📚🎸✔🔭👤🎎☆🚼🍴👕💓🌹☀🌈😆💜🗻💚🔆🐤👯🌺🌰✿👑🥧🍨🌿🎀😊🎒🍸💘😘♩😂👸❅🎵🌊📢🔊👣🍊💕😸👫⚓🌌🍂😉🌕🍇😜👜🍰🌒✊🎃🍪😌🎧🐇☻🌇⛵🐧🍆♥👛🚢🎓♪🐣🐬🎩👶🔔💡♕🚴🌳🍁🐦🚲👢🤗♡😀🍜🌷🚵🚌😗🗽📷🙊💇🎪👟🌜🏉🎤❀💳👡👋🆒👄👅👌🐠🎮🏩✌😄🎥🎬⛳🚿🌘🏡🍵🌠🏁🎅🚣✓🍅🌅🍕🍹✅🐩🆓💋😍🎺🤩🎄🎾😎❤🏆🗼🚨🎹🍍
+
+Negative emoji: 👿😟↪🔨💣�📍💥🐸💉👺🐍😵🤐🚛🌵😦😧🙈☹👾:(😶😞🌚❗☠🐜😢😏😒😓🔙🙁📌🐴😰✂👮🔪😤😔🥀✋😥😣🙇🐁😭📵😑😴⛔🔞👐😿😲🙎😷⏩⚠😯⌛🔱😡😱😕😾🔓😪🚑💔🐲😐😖😳😩😬🚫❓🌋🙍💀😼🐛🤔😫🆘😨😠👎
+
+[&#39;Dr_Heba_Raouf.csv&#39;, &#39;egypt_tweets_2014.csv&#39;, &#39;egypt_tweets_2015.csv&#39;, &#39;egypt_tweets_2016.csv&#39;, &#39;egypt_tweets_2017.csv&#39;, &#39;egypt_tweets_2018.csv&#39;, &#39;egypt_tweets_2019.csv&#39;, &#39;harassers.csv&#39;]
 </pre>
 </div>
 </div>
@@ -13153,32 +13160,40 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
-<span class="n">useful_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="s2">&quot;fullname&quot;</span><span class="p">,</span> <span class="s2">&quot;tweet_url&quot;</span><span class="p">,</span> <span class="s2">&quot;timestamp&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;egypt tweets&quot;</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">f</span> <span class="o">==</span> <span class="s2">&quot;Dr_Heba_Raouf.csv&quot;</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;egypt tweets/&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;egypt tweets/&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">useful_cols</span><span class="p">)</span>
-        <span class="n">df</span><span class="p">[</span><span class="s2">&quot;tweet_url&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;https://twitter.com&quot;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;tweet_url&quot;</span><span class="p">]</span>
-    <span class="n">split</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="n">hashtags</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">split</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">row</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">list</span><span class="p">:</span>
-            <span class="k">continue</span>
-        <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;#&quot;</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">hashtags</span><span class="p">:</span>
-                    <span class="n">hashtags</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">hashtags</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">hashtags_by_popularity</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">hashtags</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">kv</span><span class="p">:</span> <span class="n">kv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> - </span><span class="si">{}</span><span class="s2"> tweets&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)))</span>
-    <span class="n">result_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">hashtags_by_popularity</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Hashtag&quot;</span><span class="p">,</span> <span class="s2">&quot;Count&quot;</span><span class="p">])</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">result_df</span><span class="p">[:</span><span class="mi">20</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+useful_cols = [&quot;username&quot;, &quot;fullname&quot;, &quot;tweet_url&quot;, &quot;timestamp&quot;, &quot;text&quot;]
+for f in sorted(os.listdir(&quot;egypt tweets&quot;)):
+    if f == &quot;Dr_Heba_Raouf.csv&quot;:
+        df = pd.read_csv(&quot;egypt tweets/&quot; + f)
+    else:
+        df = pd.read_csv(&quot;egypt tweets/&quot; + f, sep=&quot;;&quot;, usecols=useful_cols)
+        df[&quot;tweet_url&quot;] = &quot;https://twitter.com&quot; + df[&quot;tweet_url&quot;]
+    hashtags = {}
+    feels = []
+    for tweet in df.text:
+        if type(tweet) != str:
+            continue
+        feel = sum([e in tweet for e in pos]) - sum([e in tweet for e in neg])
+        feels.append(feel)
+        for word in tweet.split():
+            if word[0] == &quot;#&quot;:
+                if word not in hashtags:
+                    hashtags[word] = 1
+                else:
+                    hashtags[word] += 1
+    hashtags_by_popularity = sorted(hashtags.items(), key=lambda kv: kv[1], reverse=True)
+    print(&quot;{} - {} tweets&quot;.format(f, len(df)))
+    result_df = pd.DataFrame(hashtags_by_popularity, columns=[&quot;Hashtag&quot;, &quot;Count&quot;])
+    display(result_df[:20])
     
-    <span class="n">femin</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(?i)femin|(?i)haras &quot;</span><span class="p">,</span> <span class="n">na</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">femin</span><span class="p">)</span>
+    femin = df[df.text.str.contains(r&quot;(?i)femin|(?i)haras &quot;, na=False)]
+    display(femin)
+    
+    feels = np.array(feels)
+    print(&quot;Positive feels: {}. Negative feels: {}&quot;.format(
+        sum(feels &gt; 0),
+        sum(feels &lt; 0)
+    ))
 </pre></div>
 
     </div>
@@ -13405,767 +13420,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2010.csv - 1074 tweets
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Hashtag</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>#Jobs</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>#Job</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>#TweetMyJOBS</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>#Egypt</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>#IOETI</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>#</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>#fb</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>#Luxor</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>#AmenazoComoBrozo</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>#TwitteandoEnLos90s</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>#84</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>#cairotoluxor</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>#Ioeti</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>#xfactor</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>#Egypt?</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>#fffflickr</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>#egypt</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>#TwitterOff</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>#FacebookOff</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>#5538886992</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>username</th>
-      <th>fullname</th>
-      <th>tweet_url</th>
-      <th>timestamp</th>
-      <th>text</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2011.csv - 26390 tweets
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Hashtag</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>#Egypt</td>
-      <td>2056</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>#Jan25</td>
-      <td>1945</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>#assiut</td>
-      <td>95</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>#noscaf</td>
-      <td>79</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>#jan25</td>
-      <td>65</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>#egypt</td>
-      <td>63</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>#fb</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>#Egypt's</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>#tahrir</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>#SLnight</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>#qik</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>#3skrny</td>
-      <td>23</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>#sohag</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>#Tahrir</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>#benisuef</td>
-      <td>14</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>#gensaku_ha_eromanga</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>#Egypt:</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>#minia</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>#KAERITAI</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>#fuckscaf</td>
-      <td>11</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>username</th>
-      <th>fullname</th>
-      <th>tweet_url</th>
-      <th>timestamp</th>
-      <th>text</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2012.csv - 63049 tweets
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Hashtag</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>#MT2</td>
-      <td>893</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>#Egypt</td>
-      <td>339</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>#egypt</td>
-      <td>268</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>#منوعات</td>
-      <td>244</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>#roki_demon</td>
-      <td>167</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>#loveless_nipple</td>
-      <td>147</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>#مصر</td>
-      <td>138</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>#Jan25</td>
-      <td>128</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>#densyousya_roki</td>
-      <td>105</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>#البارجيل</td>
-      <td>102</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>#مرسي</td>
-      <td>101</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>#la_mur_kyo</td>
-      <td>97</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>#صورفنانين</td>
-      <td>93</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>#PT</td>
-      <td>81</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>#</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>#hosiiitioku</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>#News</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>#المنيا</td>
-      <td>66</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>#عن</td>
-      <td>62</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>#luxor</td>
-      <td>55</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>username</th>
-      <th>fullname</th>
-      <th>tweet_url</th>
-      <th>timestamp</th>
-      <th>text</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2013.csv - 169867 tweets
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Hashtag</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>#عن</td>
-      <td>844</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>#مصر</td>
-      <td>582</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>#MT2</td>
-      <td>568</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>#</td>
-      <td>429</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>#حقيقة</td>
-      <td>414</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>#منير</td>
-      <td>292</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>#egypt</td>
-      <td>247</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>#خاتم_حلمي</td>
-      <td>236</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>#prt</td>
-      <td>229</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>#مرسى</td>
-      <td>203</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>#مرسي</td>
-      <td>198</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>#PRT</td>
-      <td>189</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>#Egypt</td>
-      <td>179</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>#هع</td>
-      <td>178</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>#offline</td>
-      <td>167</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>#pt</td>
-      <td>157</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>#اسيوط</td>
-      <td>149</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>#PT</td>
-      <td>141</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>#البارجيل</td>
-      <td>129</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>#اه_والله</td>
-      <td>107</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>username</th>
-      <th>fullname</th>
-      <th>tweet_url</th>
-      <th>timestamp</th>
-      <th>text</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>148243</th>
-      <td>sarcasmad</td>
-      <td>Mohammad</td>
-      <td>https://twitter.com/sarcasmad/status/316472903296225280</td>
-      <td>2013-03-26 08:53:14</td>
-      <td>"@_Hasnaaaa: If you tell a muslim woman to take her hijab off, You're doing feminism wrong."</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2014.csv - 257063 tweets
+<pre>Positive feels: 11460. Negative feels: 154
+egypt_tweets_2014.csv - 257063 tweets
 </pre>
 </div>
 </div>
@@ -14377,7 +13633,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2015.csv - 166366 tweets
+<pre>Positive feels: 18780. Negative feels: 2191
+egypt_tweets_2015.csv - 166366 tweets
 </pre>
 </div>
 </div>
@@ -14573,7 +13830,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2016.csv - 51681 tweets
+<pre>Positive feels: 3939. Negative feels: 520
+egypt_tweets_2016.csv - 51681 tweets
 </pre>
 </div>
 </div>
@@ -14761,7 +14019,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2017.csv - 30528 tweets
+<pre>Positive feels: 482. Negative feels: 55
+egypt_tweets_2017.csv - 30528 tweets
 </pre>
 </div>
 </div>
@@ -14957,7 +14216,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>egypt_tweets_2018.csv - 24094 tweets
+<pre>Positive feels: 156. Negative feels: 13
+egypt_tweets_2018.csv - 24094 tweets
 </pre>
 </div>
 </div>
@@ -15161,12 +14421,620 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>CPU times: user 17.4 s, sys: 3.42 s, total: 20.9 s
-Wall time: 21.3 s
+<pre>Positive feels: 81. Negative feels: 7
+egypt_tweets_2019.csv - 628762 tweets
 </pre>
 </div>
 </div>
 
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Hashtag</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>#egypt</td>
+      <td>759</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>#NewProfilePic</td>
+      <td>704</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>#عاجل_تحذير_ونذير_لجميع_البشر</td>
+      <td>602</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>#ﷺ</td>
+      <td>434</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>#SaudiCapturesISISLeaderrr</td>
+      <td>394</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>#Egypt</td>
+      <td>390</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>#Quran</td>
+      <td>384</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>#</td>
+      <td>371</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>#luxor</td>
+      <td>357</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>#TotalAFCON2019</td>
+      <td>346</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>#np</td>
+      <td>315</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>#اطمن_انت_مش_لوحدك</td>
+      <td>281</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>#محمددد_مرسي_عميل</td>
+      <td>276</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>#القمه_الاسلاميه_بمكههه</td>
+      <td>266</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>#Hadith</td>
+      <td>258</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>#بدر_العساكر_في_ليوان_المديفررر</td>
+      <td>257</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>#travel</td>
+      <td>227</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>#FootballTogether</td>
+      <td>217</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>#صورة_ملف_شخصي_جديدة</td>
+      <td>204</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>#BBMAsTopSocial</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>username</th>
+      <th>fullname</th>
+      <th>tweet_url</th>
+      <th>timestamp</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4109</th>
+      <td>LUXORLight</td>
+      <td>ChristinA Ritchie</td>
+      <td>https://twitter.com/LUXORLight/status/1146615306376241152</td>
+      <td>2019-07-04 03:02:46</td>
+      <td>Light Codes - Masculine and Divine Feminine - The Coming Together Message https://youtu.be/-VSbSD-8huQ  via @YouTube</td>
+    </tr>
+    <tr>
+      <th>7040</th>
+      <td>amdmohd</td>
+      <td>AHMED M. ALY || ♌💥الهيّذامツ</td>
+      <td>https://twitter.com/amdmohd/status/1146576177353678848</td>
+      <td>2019-07-04 00:27:17</td>
+      <td>وشخص مريض ولازم يتعاقب والتعاطف معاه بأي شكل فكرة غير مقبولة ابداhttps://twitter.com/YeFeministVoice/status/1146108383100981248 …</td>
+    </tr>
+    <tr>
+      <th>7670</th>
+      <td>remonshokry1</td>
+      <td>remon_s_tawfik</td>
+      <td>https://twitter.com/remonshokry1/status/1146569407147257856</td>
+      <td>2019-07-04 00:00:23</td>
+      <td>المتحرش.https://twitter.com/YeFeministVoice/status/1146108383100981248 …</td>
+    </tr>
+    <tr>
+      <th>9783</th>
+      <td>EzzatNaguib7</td>
+      <td>Ezzat Naguib</td>
+      <td>https://twitter.com/EzzatNaguib7/status/1146547973666611200</td>
+      <td>2019-07-03 22:35:13</td>
+      <td>كلها مبررات للحيوانية اللي بقت فالشباب فالشوارع..\nمهو السعودية لبس محتشم عالاخر والاكتر نسب تحرش فالدول العربية ..https://twitter.com/YeFeministVoice/status/1146108383100981248 …</td>
+    </tr>
+    <tr>
+      <th>16322</th>
+      <td>MarwaAbdallh2</td>
+      <td>ميمو🇦🇷🇦🇷🇦🇷</td>
+      <td>https://twitter.com/MarwaAbdallh2/status/1146466722859421698</td>
+      <td>2019-07-03 17:12:21</td>
+      <td>طبعاًhttps://twitter.com/yefeministvoice/status/1146108383100981248 …</td>
+    </tr>
+    <tr>
+      <th>20929</th>
+      <td>LUXORLight</td>
+      <td>ChristinA Ritchie</td>
+      <td>https://twitter.com/LUXORLight/status/1146403925530202113</td>
+      <td>2019-07-03 13:02:49</td>
+      <td>Light Codes of the Divine Masculine and Divine Feminine - A Coming Together  - http://eepurl.com/gww2x1</td>
+    </tr>
+    <tr>
+      <th>40966</th>
+      <td>obliviate_8</td>
+      <td>Renad</td>
+      <td>https://twitter.com/obliviate_8/status/1146093467229204480</td>
+      <td>2019-07-02 16:29:10</td>
+      <td>لا انت مختار فئة معينة تبص عليهم دي عليك انت، دا مش feminism دا عته\nلكن الطبيعي إن الاتنين مش عكس بعض ولا حاجة\nال feminism ضد العنف ضد المرأة، المعاملة اللي مش كويسة، الضغط اللي بيفرضه المجتمع وهكذا وكلها حاجات صح ومش بتتعارض خالص مع اللي بتقوله</td>
+    </tr>
+    <tr>
+      <th>66545</th>
+      <td>cealhada</td>
+      <td>Caroline Al-Hada</td>
+      <td>https://twitter.com/cealhada/status/1145693137714778113</td>
+      <td>2019-07-01 13:58:24</td>
+      <td>I can’t speak for all American feminists ... I think most Americans in general are quite unfamiliar with the complexities of the Middle East. Liberals &amp; conservatives like. I am a pro-life from womb to tomb Christian feminist.</td>
+    </tr>
+    <tr>
+      <th>102087</th>
+      <td>Tasneem94O7</td>
+      <td>Tasneem🌙</td>
+      <td>https://twitter.com/Tasneem94O7/status/1145125239682211840</td>
+      <td>2019-06-30 00:21:47</td>
+      <td>انا ممكن اتقبل ان male عادي جدا ممكن يبقى feminine شوية لكن مش لدرجة بنته تقله مام !! هنا بقى الموضوع أخد محنى جديد خطير اوي</td>
+    </tr>
+    <tr>
+      <th>102626</th>
+      <td>nadaatef98</td>
+      <td>Nada عtef</td>
+      <td>https://twitter.com/nadaatef98/status/1145120110618787841</td>
+      <td>2019-06-30 00:01:24</td>
+      <td>Toxic femininity is just sad.</td>
+    </tr>
+    <tr>
+      <th>106928</th>
+      <td>stadjoshi</td>
+      <td>St Adjosh</td>
+      <td>https://twitter.com/stadjoshi/status/1145070872534933506</td>
+      <td>2019-06-29 20:45:45</td>
+      <td>Are we giving our kids mental disorder?\nThis is a "Pure Contagion" gradually seeping through the fabrics of our society/culture.\n"Forget Patriarchy, the problem is TOXIC FEMINISTS" - Candace Owens.https://youtu.be/msTGBJpfULE</td>
+    </tr>
+    <tr>
+      <th>109377</th>
+      <td>MariamEIbrhim74</td>
+      <td>Mari Gül</td>
+      <td>https://twitter.com/MariamEIbrhim74/status/1145033722930089984</td>
+      <td>2019-06-29 18:18:07</td>
+      <td>هما ال Feminists كدا بيطلعوا من كل حته</td>
+    </tr>
+    <tr>
+      <th>116221</th>
+      <td>gohar_hussien</td>
+      <td>HussienGohar</td>
+      <td>https://twitter.com/gohar_hussien/status/1144938276337397760</td>
+      <td>2019-06-29 11:58:51</td>
+      <td>كسم اى حد feminist تمام !</td>
+    </tr>
+    <tr>
+      <th>117475</th>
+      <td>WaelAdel96</td>
+      <td>Wael</td>
+      <td>https://twitter.com/WaelAdel96/status/1144918876305670145</td>
+      <td>2019-06-29 10:41:46</td>
+      <td>التايم لاين بقي مكب نفايات لناس اتنشن هورز وأغلبهم ستات عندهم نقص و ذكور مش هقول رجالة بين قوسين Feminist عايزه تلم الستات عليهم عشان هما اكتر ناس متحرشة وبتفكر شمال فيهم، المجتمع عنده أمراض اقسم بالله عايز سنين عشان يتعالج، ربنا يخرجنا منها سالمين.</td>
+    </tr>
+    <tr>
+      <th>165761</th>
+      <td>aiya_74</td>
+      <td>Aiya</td>
+      <td>https://twitter.com/aiya_74/status/1144085126319677441</td>
+      <td>2019-06-27 03:28:44</td>
+      <td>ف يخوانا ميطلعليش حد يقول إزاي بنت تبقي ضد بنت وازاي تيجي عليها وجو دماغ ال feminists دي بقي لأ وكمان جو انكوا تدخلوا حوار ان اي بنت عامة لو اتكلمت كدة يبقي attention seeking، لأن هو فعلا لا مش دايما بس الغلط غلط وهي غلطت، مش هنقف مع حد ونبررله ونشوفه صح تماما لكونها بنت زينا</td>
+    </tr>
+    <tr>
+      <th>167934</th>
+      <td>adoreyunho</td>
+      <td>cj</td>
+      <td>https://twitter.com/adoreyunho/status/1144045665498128384</td>
+      <td>2019-06-27 00:51:56</td>
+      <td>personalmente me da mucho miedo ese feminismo, porque estamos para protegernos pero nos desean la muerte no estamos seguros en ningún lado</td>
+    </tr>
+    <tr>
+      <th>204060</th>
+      <td>almonzer_amro</td>
+      <td>Gluttony #مدنياااو</td>
+      <td>https://twitter.com/almonzer_amro/status/1143536812691996678</td>
+      <td>2019-06-25 15:09:56</td>
+      <td>If you thought arguing with feminists is hard, try talking to the LGBTQ</td>
+    </tr>
+    <tr>
+      <th>211539</th>
+      <td>dumbbyl</td>
+      <td>booop</td>
+      <td>https://twitter.com/dumbbyl/status/1143411304884867073</td>
+      <td>2019-06-25 06:51:13</td>
+      <td>minum feminax</td>
+    </tr>
+    <tr>
+      <th>212632</th>
+      <td>LizardWithBeard</td>
+      <td>The Lizard Of Oz</td>
+      <td>https://twitter.com/LizardWithBeard/status/1143375898017595392</td>
+      <td>2019-06-25 04:30:31</td>
+      <td>LET ME VALIDATE MY OPINIONS BY BEATING YOU WITH THEM\nVIVIAN\nWHY DON'T YOU WANT TO ACKNOWLEDGE MY SUPERIORITY!?\nYOU MUST BE SOME KIND OF FEMINAZI LEFTCUCK SNOWTARD.\nYou're the reason women don't want to fuck me this is discrimination.</td>
+    </tr>
+    <tr>
+      <th>227788</th>
+      <td>yourlonefriend</td>
+      <td>The Dude</td>
+      <td>https://twitter.com/yourlonefriend/status/1142741462838370304</td>
+      <td>2019-06-23 10:29:30</td>
+      <td>بيتهألي مفيش feminism في حاجة زي دي</td>
+    </tr>
+    <tr>
+      <th>297701</th>
+      <td>youssefmarwan23</td>
+      <td>Youssef Marwan</td>
+      <td>https://twitter.com/youssefmarwan23/status/1137158352629391360</td>
+      <td>2019-06-08 00:44:13</td>
+      <td>Eh ya abdelrahman enta mesh feminist wala eh</td>
+    </tr>
+    <tr>
+      <th>404378</th>
+      <td>AmrSharafElDen</td>
+      <td>Abo Gouda</td>
+      <td>https://twitter.com/AmrSharafElDen/status/1128008282386436096</td>
+      <td>2019-05-13 18:45:06</td>
+      <td>And now fucking feminists gonna blame the producers #GameofThrones</td>
+    </tr>
+    <tr>
+      <th>436749</th>
+      <td>Tarekmokhtar17</td>
+      <td>Tarekmokhtar</td>
+      <td>https://twitter.com/Tarekmokhtar17/status/1125005337688510465</td>
+      <td>2019-05-05 11:52:28</td>
+      <td>feminism illness الله يحرقهم</td>
+    </tr>
+    <tr>
+      <th>510110</th>
+      <td>moatazgamal121</td>
+      <td>MGGBT</td>
+      <td>https://twitter.com/moatazgamal121/status/1117492085723148288</td>
+      <td>2019-04-14 18:17:29</td>
+      <td>الإسلام https://twitter.com/Feminism_pics/status/1117174870125756416 …</td>
+    </tr>
+    <tr>
+      <th>562346</th>
+      <td>eptehalelshazly</td>
+      <td>Eptehal | إبتهال</td>
+      <td>https://twitter.com/eptehalelshazly/status/1111987753288376321</td>
+      <td>2019-03-30 13:45:14</td>
+      <td>No one asked you to  + it’s got nothing to do with feminism you just judged without watching</td>
+    </tr>
+    <tr>
+      <th>591815</th>
+      <td>AbdoO_nader</td>
+      <td>Abdelrahman.</td>
+      <td>https://twitter.com/AbdoO_nader/status/1108623627073798144</td>
+      <td>2019-03-21 06:57:24</td>
+      <td>Women are so powerful the world would suck without them literally .. so to every mother , daughter , sister , wife or all of that you are life u don’t need feminist groups to make you aware of that you are way more important to find your voice through movements that rise and fall</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Positive feels: 1732. Negative feels: 552
+harassers.csv - 9429 tweets
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Hashtag</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>#منتخب_المتحرشين</td>
+      <td>9323</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>#مصر_جنوب_افريقيا</td>
+      <td>819</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>#منتخب_مصر</td>
+      <td>117</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>#حاكموا_شوبير_المزور</td>
+      <td>107</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>#منتخب_الساجدين</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>#اتحاد_الكرة</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>#مصر</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>#اتحاد_الكره</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>#طارق_حامد</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>#SalahSupportsSexualHarassment</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>#محمد_صلاح</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>#عمرو_وردة</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>#غير_مقبول</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>#رضا_عبد_العال</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>#اتحاد_العار</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>#اطمن_انت_مش_لوحدك</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>#اليوم_العالمي_للاعترافات</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>#مصر_جنوب_أفريقيا</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>#مصر_جنوب_افريقياَ</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>#البنزين</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>username</th>
+      <th>fullname</th>
+      <th>tweet_url</th>
+      <th>timestamp</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4884</th>
+      <td>AnkeJulieMartin</td>
+      <td>AJ Martin</td>
+      <td>https://twitter.com/AnkeJulieMartin/status/1147635598192271364</td>
+      <td>2019-07-06 22:37:03</td>
+      <td>#منتخب_المتحرشين\nDeutsche Feministinnen sollten  unter diesem Hashtag lesen. Nachhilfe von Arabischen Aktivisten gegen sexuelle Belästigung!</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Positive feels: 11. Negative feels: 6
+CPU times: user 45.5 s, sys: 590 ms, total: 46.1 s
+Wall time: 46.3 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 

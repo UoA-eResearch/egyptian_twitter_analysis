@@ -8,7 +8,7 @@ import glob
 import sys
 from tqdm import tqdm
 from bs4 import BeautifulSoup
-tqdm.pandas()
+tqdm.pandas(dynamic_ncols=True)
 import pickle
 pos = open("positive_emoji_v2.csv").read().split(",")
 neg = open("negative_emoji_v2.csv").read().split(",")

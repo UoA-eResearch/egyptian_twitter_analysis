@@ -18,7 +18,19 @@ with open('sentiment_classifier_model.pickle', 'rb') as f:
     model = pkl["model"]
     vocab = pkl["vocab"]
 
-def classify(html):
+def classify_text(text):
+    feel = sum([e in text for e in pos]) - sum([e in text for e in neg])
+    if feel > 0:
+        return "pos"
+    elif feel < 0:
+        return "neg"
+    words = text.split()
+    features = {word: word in words for word in vocab}
+    if not any(features.values()):
+        return "?"
+    return model.classify(features)
+
+def classify_html(html):
     feel = sum([e in html for e in pos]) - sum([e in html for e in neg])
     if feel > 0:
         return "pos"
@@ -33,7 +45,7 @@ def classify(html):
             s.append(child["alt"])
         else:
             s.append(child.text)
-    words = " ".join(s).lower().split()
+    words = " ".join(s).split()
     features = {word: word in words for word in vocab}
     if not any(features.values()):
         return "?"
@@ -44,8 +56,11 @@ files = sys.argv[1:]
 #files = sorted(glob.glob("egypt tweets/egypt_tweets*.csv"))
 for f in files:
     print("Loading " + f)
-    df = pd.read_csv(f, sep=";")
-    df["feel"] = df.html.progress_apply(classify)
+    df = pd.read_csv(f, sep=None)
+    if "html" in df.keys():
+        df["feel"] = df.html.progress_apply(classify_html)
+    else:
+        df["feel"] = df.text.progress_apply(classify_text)
     new_filename = "classified/" + os.path.splitext(os.path.basename(f))[0] + ".csv"
     df.to_csv(new_filename, sep=";", index=False)
     print("Classification done: {} positive {} negative {} undetermined".format(sum(df.feel == "pos"), sum(df.feel == "neg"), sum(df.feel == "?")))

@@ -35,6 +35,8 @@ def classify(html):
             s.append(child.text)
     words = " ".join(s).lower().split()
     features = {word: word in words for word in vocab}
+    if not any(features.values()):
+        return "?"
     return model.classify(features)
 
 os.makedirs("classified", exist_ok=True)
@@ -46,5 +48,5 @@ for f in files:
     df["feel"] = df.html.progress_apply(classify)
     new_filename = "classified/" + os.path.splitext(os.path.basename(f))[0] + ".csv"
     df.to_csv(new_filename, sep=";", index=False)
-    print("Classification done: {} positive {} negative".format(sum(df.feel == "pos"), sum(df.feel == "neg")))
+    print("Classification done: {} positive {} negative {} undetermined".format(sum(df.feel == "pos"), sum(df.feel == "neg"), sum(df.feel == "?")))
 

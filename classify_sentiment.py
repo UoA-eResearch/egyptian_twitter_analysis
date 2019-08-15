@@ -18,7 +18,7 @@ with open('sentiment_classifier_model.pickle', 'rb') as f:
     model = pkl["model"]
     vocab = pkl["vocab"]
 
-def classify_text(text):
+def classify_text(text, debug = False):
     feel = sum([e in text for e in pos]) - sum([e in text for e in neg])
     if feel > 0:
         return "pos"
@@ -28,7 +28,13 @@ def classify_text(text):
     features = {word: word in words for word in vocab}
     if not any(features.values()):
         return "?"
-    return model.classify(features)
+    if debug:
+        print("Matched vocab: " + str(list(k for k,v in features.items() if v)))
+        p = model.prob_classify(features)
+        print(p.max())
+        return [(sample, p.prob(sample)) for sample in p.samples()]
+    else:
+        return model.classify(features)
 
 def classify_html(html):
     feel = sum([e in html for e in pos]) - sum([e in html for e in neg])

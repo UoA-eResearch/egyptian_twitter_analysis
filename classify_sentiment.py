@@ -51,17 +51,22 @@ def classify_html(html):
         return "?"
     return model.classify(features)
 
-os.makedirs("classified", exist_ok=True)
-files = sys.argv[1:]
-#files = sorted(glob.glob("egypt tweets/egypt_tweets*.csv"))
-for f in files:
-    print("Loading " + f)
-    df = pd.read_csv(f, sep=None)
-    if "html" in df.keys():
-        df["feel"] = df.html.progress_apply(classify_html)
-    else:
-        df["feel"] = df.text.progress_apply(classify_text)
-    new_filename = "classified/" + os.path.splitext(os.path.basename(f))[0] + ".csv"
-    df.to_csv(new_filename, sep=";", index=False)
-    print("Classification done: {} positive {} negative {} undetermined".format(sum(df.feel == "pos"), sum(df.feel == "neg"), sum(df.feel == "?")))
+if len(sys.argv) > 1:
+    os.makedirs("classified", exist_ok=True)
+    files = sys.argv[1:]
+    #files = sorted(glob.glob("egypt tweets/egypt_tweets*.csv"))
+    for f in files:
+        print("Loading " + f)
+        df = pd.read_csv(f, sep=None)
+        if "html" in df.keys():
+            df["feel"] = df.html.progress_apply(classify_html)
+        else:
+            df["feel"] = df.text.progress_apply(classify_text)
+        new_filename = "classified/" + os.path.splitext(os.path.basename(f))[0] + ".csv"
+        df.to_csv(new_filename, sep=";", index=False)
+        print("Classification done: {} positive {} negative {} undetermined".format(sum(df.feel == "pos"), sum(df.feel == "neg"), sum(df.feel == "?")))
 
+else:
+    while 1:
+        text = input("Enter text: ")
+        print(classify_text(text))
